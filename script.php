@@ -1,5 +1,7 @@
 <?php
 namespace phpBasic {
+  phpinfo();
+  echo exec('whoami');
   class Car
   {
     var $color;
@@ -11,6 +13,9 @@ namespace phpBasic {
     function what_color() {
       return $this->color;
     }
+    function __destruct() {
+       print "Car class destructor\n";
+   }
   }
 
   function print_vars($obj) {
@@ -66,5 +71,7 @@ namespace AnotherProject {
   $a = \phpBasic\strlen("Beauty and Beast");
   echo $a . "<br>";
   echo 'Namespace:' . __NAMESPACE__ . "<br>";
+  echo readfile("README.md");
+  echo "<br>";
 }
 ?>
