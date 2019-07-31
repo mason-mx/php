@@ -66,3 +66,11 @@ to change the destination directory permission.
 http://localhost/script.php
 http://localhost/form.php
 ```
+
+## Run PHP+MYSQL services
+
+```
+cd docker-compose
+sudo docker-compose up -d
+curl localhost:8100/fetch.php
+```
